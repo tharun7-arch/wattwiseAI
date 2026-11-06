@@ -1,1 +1,1 @@
-# wattwiseAI
+# WattWiseAi

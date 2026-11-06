@@ -1,0 +1,19 @@
+# Netlify Configuration for WattWise AI
+# Monorepo with React + Vite in the "frontend" folder
+
+[build]
+  # Base directory where frontend code and package.json reside
+  base = "frontend"
+
+  # Directory that contains the deploy-ready static files (relative to base)
+  publish = "dist"
+
+  # Command to install and build the frontend application
+  command = "npm run build"
+
+# Single-Page Application (SPA) redirect rule:
+# Ensures React Router DOM handles all frontend paths without 404s on page refresh
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
